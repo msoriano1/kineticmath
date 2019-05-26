@@ -33,7 +33,7 @@
                                         <td>  <%= i.title %> </td>
                                         <td> <%= link_to 'View', yearlevel_topic_worksheet_path(@yearlevel, @topic, i), class: "btn btn-primary btn-lg", method: :get %> </td>
                                         <td> <%= link_to 'Edit', edit_yearlevel_topic_worksheet_path(@yearlevel, @topic, i), class: "btn btn-warning btn-lg", method: :get %></td>
-                                        <td> <%= link_to 'Delete', yearlevel_topic_worksheet_path(@yearlevel, @topic, i), class: "btn btn-danger btn-lg", :method => :delete, :data => {:confirm => 'Are you sure you want to delete this Topic??'} %> </td>
+                                        <td> <%= link_to 'Delete', yearlevel_topic_worksheet_path(@yearlevel, @topic, i), class: "btn btn-danger btn-lg", :method => :delete, :data => {:confirm => 'Are you sure you want to delete this Worksheet??'} %> </td>
                                     </tr>
                                 <% end %>
                             <% else %>

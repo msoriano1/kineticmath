@@ -22,6 +22,7 @@
                     <td>  <%= i.name %> </td>
                     <td> <%= i.description %> </td>
                     <td> <%= link_to 'Select', yearlevel_topic_path(@yearlevel, i), class: "btn btn-primary btn-lg", method: :get %> </td>
+                    <td> <%= link_to 'Delete', yearlevel_topic_path(@yearlevel, i), class: "btn btn-danger btn-lg", :method => :delete, :data => {:confirm => 'Are you sure you want to delete this Topic??'} %> </td>
                 </tr>
             <% end %>
         </tbody>

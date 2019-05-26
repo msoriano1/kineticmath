@@ -23,6 +23,17 @@ class TopicsController < ApplicationController
         end
     end
     
+    def destroy
+        @topic.worksheets.each do |i|
+            i.destroy
+        end
+        @topic.destroy
+        respond_to do |format|
+          format.html { redirect_to yearlevel_path(@yearlevel), notice: 'Item was successfully destroyed.' }
+          format.json { head :no_content }
+        end
+      end
+
     private
     
     def set_topic
