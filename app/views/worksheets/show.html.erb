@@ -24,7 +24,7 @@
         <% @worksheet.items.each do |j| %>
             <tr> 
                 <td class="align-top">  <%= j.number %> </td>
-                <td class="align-top">  <%= j.question, white-space: pre-line; %> <br><%= if j.image.length > 0 then image_tag j.image.url, class: 'img-fluid' end %></td>
+                <td class="align-top">  <%= h(j.question).gsub(/\n/, '<br/>') %> <br><%= if j.image.length > 0 then image_tag j.image.url, class: 'img-fluid' end %></td>
                 <td class="align-top">  <%= j.answer %> </td>
             </tr>
         <% end %>
