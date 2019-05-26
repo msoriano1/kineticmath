@@ -32,6 +32,11 @@
                 <%= link_to "Create a year level", new_yearlevel_path, class: "btn btn-primary btn-lg text-center", style: 'margin-bottom:20px;', method: :get %>
             </div>
         <% end %>
+        
+        <% if for_admin %>
+        <%= link_to "Create a Year Level", new_yearlevel_path, class: "btn btn-primary btn-lg text-center", style: 'margin-bottom:20px;', method: :get %>
+        <% end %>
+        
     </div>
 </div>
 

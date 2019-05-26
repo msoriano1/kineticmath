@@ -14,9 +14,9 @@ class YearlevelsController < ApplicationController
     end
     
     def create
-        @yearlevel = Yearlevel.new params[:yearlevel]
+        @yearlevel = Yearlevel.new(yearlevel_params)
         if @yearlevel.save
-            redirect_to :action => 'show'#, :id => @yearlevel.id
+            redirect_to yearlevels_path, notice: "Year level successfully added."
         else
             render :action => 'new'
         end
@@ -31,6 +31,9 @@ class YearlevelsController < ApplicationController
         end
     end
     
+    def yearlevel_params
+        params.require(:yearlevel).permit!
+    end
 
     #helper method to find current year level
 end

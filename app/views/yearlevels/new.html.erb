@@ -1,0 +1,48 @@
+<div class="bodynonav">
+    <br>
+<h1> <strong>YEARLEVELS</strong>  |  Create Year Level</h1>
+<br>
+<br>
+<% if @yearlevel.errors.full_messages.count > 0 %>
+  <div id="error_explanation" class="alert alert-danger" role="alert">
+    <h4 class="text-error"><%= pluralize(@yearlevel.errors.count, "error") %> prohibited this year level from being saved:</h4>
+    <ul style="margin-bottom: 0">
+    <% @yearlevel.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<fieldset>
+    <%= simple_form_for @yearlevel, url: yearlevels_path(@yearlevel) do |f| %>
+<div id="log-in" class="container">
+<div class="col-6 col-sm-3">
+
+<div class="form-inputs">
+    <div class="row">
+    <div class="input-field col s4">
+    <p><%= f.label "Year Number" %>
+    <%= f.text_field :number %></p>
+    </div>
+    </div>
+    <br>
+    <div class="row">
+    <div class="input-field col s4">
+    <p><%= f.label "Description" %>
+    <%= f.text_area :description, :size => "22" %></p>
+    </div>
+   </div>
+      </div>
+      <br>
+</div>
+<div class="row">
+<div class="input-field col s4">
+<div class="form-actions">
+    <%= f.submit "Create", class: "btn btn-primary btn-lg" %>
+</div>
+</div>
+</div>
+<% end %>
+
+</div>
+</fieldset>
