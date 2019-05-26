@@ -23,7 +23,7 @@
     <% @worksheet.items.each do |j| %>
         <tr> 
             <td class="align-top">  <%= j.number %> </td>
-            <td class="align-top">  <%= simple_format(j.question) %> 
+            <td class="align-top">  <%= j.question %> 
                 <br>
                 <% if j.image? %>
                   <%= image_tag j.image.url,class: 'img-fluid' %>
