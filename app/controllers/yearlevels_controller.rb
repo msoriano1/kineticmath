@@ -16,7 +16,7 @@ class YearlevelsController < ApplicationController
     def create
         @yearlevel = Yearlevel.new(yearlevel_params)
         if @yearlevel.save
-            redirect_to yearlevels_path, notice: "Year level successfully added."
+            redirect_to yearlevel_path, notice: "Year level successfully added."
         else
             render :action => 'new'
         end
