@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   get '/students', to: 'students#index'
   get '/teachers', to: 'teachers#index'
-  get '/admins/list', to: 'admins#index'
+  get '/admins', to: 'admins#index'
 
   devise_scope :student do
     authenticated :student do
@@ -56,7 +56,7 @@ Rails.application.routes.draw do
       put '/teachers/update' =>'teachers#update'
 
       get '/admins/edit' =>'admins#edit'
-      get '/admins/list' => 'admins#show'
+      get '/admins/list' => 'admins#index'
       put '/admins/update' =>'admins#update'
 
       root 'admins#index', as: :authenticated_admin
