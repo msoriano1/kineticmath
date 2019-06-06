@@ -56,7 +56,7 @@ Rails.application.routes.draw do
       put '/teachers/update' =>'teachers#update'
 
       get '/admins/edit' =>'admins#edit'
-      get '/admins/show' => 'admins#index'
+      get '/admins/show' => 'admins#show'
       put '/admins/update' =>'admins#update'
 
       root 'admins#index', as: :authenticated_admin
