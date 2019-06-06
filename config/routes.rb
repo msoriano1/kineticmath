@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   get '/students', to: 'students#index'
   get '/teachers', to: 'teachers#index'
-  get '/admins', to: 'admins#index'
+  get '/admins/list', to: 'admins#index'
 
   devise_scope :student do
     authenticated :student do
