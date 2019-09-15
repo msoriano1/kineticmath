@@ -135,7 +135,7 @@ ActiveRecord::Schema.define(version: 20180922094232) do
   end
 
   create_table "yearlevels", force: :cascade do |t|
-    t.integer  "number"
+    t.string  "number"
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
